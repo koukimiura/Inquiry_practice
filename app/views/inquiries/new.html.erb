@@ -1,0 +1,10 @@
+<h2>test お問い合わせ</h2>
+<%= form_for @inquiry do |f| %>
+<p><%= f.text_field :name %></p>
+<p><%= f.text_field :email %></p>
+<p><%= f.text_area :content %></p>
+<p><%= f.submit "送信" %></p>
+<% end %>
+
+<%= link_to '質問一覧', inquiries_path %>
+

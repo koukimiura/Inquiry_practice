@@ -1,0 +1,18 @@
+<% i=0 %>
+<% @inquries.each do |inquiry| %>
+    <% @answers.each do |answer| %>
+        <% if inquiry.id == answer.inquiry_id %>
+            <p>質問内容</p>
+            <%= i+=1 %><p><%= inquiry.content %></p>
+            <p>回答</p>
+            <p><%= answer.content %></p>
+        <% end %>
+    <% end %>
+<% end %>
+
+<hr>
+<%= link_to 'お問い合わせ', new_inquiry_path %>
+<%= link_to '回答', new_answer_path %>
+    
+        
+        
